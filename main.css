@@ -1,3 +1,37 @@
+html,
 body {
-  background-color: lightblue;
+  background-color: rgb(205, 236, 247);
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  /* border: 1px solid red; */
+  min-height: 20vh;
+}
+
+section {
+  /* border: 1px solid white; */
+  background-color: rgb(250, 250, 250);
+  min-height: 70vh;
+}
+
+div {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+footer {
+  /* border: 1px solid blue; */
+  min-height: 10vh;
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
 }
