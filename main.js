@@ -40,7 +40,7 @@ const pies = [
     ingredients: 'Pecans, sugar, butter, flour',
     bakeTemp: 5000,
     drinkPairing: 'Milk',
-    imageURL: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
+    imageUrl: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
     instructor: 'Saul',
     iceCream: 'Vanilla',
   },
@@ -49,7 +49,7 @@ const pies = [
     ingredients: 'lemons, sugar, butter, flour',
     bakeTemp: 5000,
     drinkPairing: 'Water',
-    imageURL: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
+    imageUrl: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
     instructor: 'Saul',
     iceCream: 'none',
   },
@@ -57,10 +57,10 @@ const pies = [
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.getElementById(divId);
-  selectedDiv.innerHTML += textToPrint;
+  selectedDiv.innerHTML = textToPrint;
 }
 
-// const getPieNames = () => {
+// const buildPieCards = () => {
 //   let domString = '';
 //   for (var i = 0; i < pies.length; i++) {
 //     domString += `${pies[i].name} </br>`;
@@ -68,17 +68,19 @@ const printToDom = (divId, textToPrint) => {
 //   printToDom('div1', domString);
 // }
 
-const getPieIngredients = () => {
+const buildPieCards = () => {
   let domString = '';
   pies.forEach((pie) => {
+    domString += `<div class="card">`;
     domString += `<p>${pie.name}</p>`;
-  })
+    domString += `<img src=${pie.imageUrl} alt='Image of ${pie.name}'>`;
+    domString += `</div>`;
+  });
   printToDom('div1', domString);
 }
 
 const init = () => {
-  // getPieNames();
-  getPieIngredients();
+  buildPieCards();
 }
 
 init();
