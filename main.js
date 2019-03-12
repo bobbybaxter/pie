@@ -79,7 +79,16 @@ const buildPieCards = () => {
   printToDom('div1', domString);
 }
 
+const buttonClick = () => {
+  console.log('you clicked a button');
+}
+
+const buttonEvents = () => {
+  document.getElementById('Zoe').addEventListener('click', buttonClick);
+}
+
 const init = () => {
+  buttonEvents();
   buildPieCards();
 }
 
