@@ -21,9 +21,24 @@ section {
   min-height: 70vh;
 }
 
-div {
-  margin-right: 10%;
-  margin-left: 10%;
+#div1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: hidden;
+  border-radius: 25px 10px 25px 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 5px 5px 10px 0;
+  text-align: center;
+  background-color: rgb(205, 236, 247);
+
 }
 
 footer {
@@ -34,4 +49,11 @@ footer {
 
 .text-center {
   text-align: center;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
 }

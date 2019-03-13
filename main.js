@@ -40,7 +40,7 @@ const pies = [
     ingredients: 'Pecans, sugar, butter, flour',
     bakeTemp: 5000,
     drinkPairing: 'Milk',
-    imageURL: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
+    imageUrl: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
     instructor: 'Saul',
     iceCream: 'Vanilla',
   },
@@ -49,7 +49,7 @@ const pies = [
     ingredients: 'lemons, sugar, butter, flour',
     bakeTemp: 5000,
     drinkPairing: 'Water',
-    imageURL: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
+    imageUrl: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
     instructor: 'Saul',
     iceCream: 'none',
   },
@@ -57,10 +57,10 @@ const pies = [
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.getElementById(divId);
-  selectedDiv.innerHTML += textToPrint;
+  selectedDiv.innerHTML = textToPrint;
 }
 
-// const getPieNames = () => {
+// const buildPieCards = () => {
 //   let domString = '';
 //   for (var i = 0; i < pies.length; i++) {
 //     domString += `${pies[i].name} </br>`;
@@ -68,17 +68,46 @@ const printToDom = (divId, textToPrint) => {
 //   printToDom('div1', domString);
 // }
 
-const getPieIngredients = () => {
+
+const buildPieCards = (monkeybutts) => {
   let domString = '';
-  pies.forEach((pie) => {
+  monkeybutts.forEach((pie) => {
+    domString += `<div class="card">`;
     domString += `<p>${pie.name}</p>`;
-  })
+    domString += `<img src=${pie.imageUrl} alt='Image of ${pie.name}'>`;
+    domString += `</div>`;
+  });
   printToDom('div1', domString);
 }
 
+const buttonClick = (e) => {
+  const buttonId = e.target.id;
+  // console.log('you clicked a button', e.target.id);
+  const selectedPies = [];
+
+  pies.forEach((pie) => {
+    if (pie.instructor === buttonId) {
+      selectedPies.push(pie);
+    }
+  });
+
+  if (buttonId === 'All') {
+    buildPieCards(pies);
+  } else {
+    buildPieCards(selectedPies);
+  };
+};
+
+const buttonEvents = () => {
+  document.getElementById('Zoe').addEventListener('click', buttonClick);
+  document.getElementById('Saul').addEventListener('click', buttonClick);
+  document.getElementById('Michael').addEventListener('click', buttonClick);
+  document.getElementById('All').addEventListener('click', buttonClick);
+}
+
 const init = () => {
-  // getPieNames();
-  getPieIngredients();
+  buttonEvents();
+  buildPieCards(pies);
 }
 
 init();
