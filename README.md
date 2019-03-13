@@ -1,6 +1,9 @@
 # Pie
 Makes an array of pies
 
+## Screenshots
+![image of pies website](https://raw.githubusercontent.com/bobbybaxter/pie/master/img/pie-screenshot.png)
+
 ## Getting Started
 ```
 $git clone https://github.com/bobbybaxter/pie
