@@ -1,69 +1,36 @@
 # Pie
-Makes an array of pies
+One-page locally hosted site to practice arrays and buttons in Javascript.
 
 ## Screenshots
 ![image of pies website](https://raw.githubusercontent.com/bobbybaxter/pie/master/img/pie-screenshot.png)
 
 ## Getting Started
+Clone the repo:
 ```
 $git clone https://github.com/bobbybaxter/pie
 ```
 
 ### Prerequisites
+Download HTTP Server, to be able to serve the site locally in your browser:
 ```
 $npm install -g http-server
 ```
 
 ## Running
-Browse to pie director and run http server
-
-<!-- ## Headings
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-## Text
-Text is just type into the document.  Two spaces at the end of a line create a new one. 
-
-Like this.
-
-## Lists
-#### Ordered
-1. Item #1
-2. Item #2
-3. Item #3
-
-#### Unordered
-- Item #1
-- Item #2
-- Item #3
-  - item #4
-  - item #5
-
-## Links
-[Text](https://google.com)
-
-[Link with Title](https://ww.google.com "Google's Homepage")
-
-## Images
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference=style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-## Syntax Highlighting
-```javascript
-let text = "javascript"
-alert(text);
+Browse to pie directory and run Http Server by typing the following command into the terminal:
+```
+$ hs -p 5000
 ```
 
-## Checkboxes
-- [ ] Item #1
-- [ ] Item #2
-- [x] Item #3 -->
+In your web browser, copy and paste this:
+
+ `localhost:5000`
+
+ ## Explanation
+ In **main.js**, we've first defined an array of pies with `const pies`.
+
+ Next, we've written a helper function to print output to the webpage with `const printToDom`.  This works by assigning the text we want to print to the element in the HTML file with the ID tag we specify when calling the function.
+ 
+ Then, we've written a function to build cards out of each of our array items with `const buildPieCards`.  We use a `.forEach` method on the specified array parameter to loop through all of the array items, build a `<div>` element with the pie's name and image, then print to the page using our `printToDom` function.
+
+ *Note: commented out is a simplified version of the above code using a for loop instead of a `.forEach` method.*
