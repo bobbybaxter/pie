@@ -60,15 +60,6 @@ const printToDom = (divId, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 }
 
-// const buildPieCards = () => {
-//   let domString = '';
-//   for (var i = 0; i < pies.length; i++) {
-//     domString += `${pies[i].name} </br>`;
-//   };
-//   printToDom('div1', domString);
-// }
-
-
 const buildPieCards = (monkeybutts) => {
   let domString = '';
   monkeybutts.forEach((pie) => {
@@ -79,6 +70,14 @@ const buildPieCards = (monkeybutts) => {
   });
   printToDom('div1', domString);
 }
+
+// const buildPieCards = () => {
+//   let domString = '';
+//   for (var i = 0; i < pies.length; i++) {
+//     domString += `${pies[i].name} </br>`;
+//   };
+//   printToDom('div1', domString);
+// }
 
 const buttonClick = (e) => {
   const buttonId = e.target.id;
