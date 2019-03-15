@@ -79,6 +79,13 @@ const buildPieCards = (monkeybutts) => {
 //   printToDom('div1', domString);
 // }
 
+const buttonEvents = () => {
+  document.getElementById('Zoe').addEventListener('click', buttonClick);
+  document.getElementById('Saul').addEventListener('click', buttonClick);
+  document.getElementById('Michael').addEventListener('click', buttonClick);
+  document.getElementById('All').addEventListener('click', buttonClick);
+}
+
 const buttonClick = (e) => {
   const buttonId = e.target.id;
   // console.log('you clicked a button', e.target.id);
@@ -96,13 +103,6 @@ const buttonClick = (e) => {
     buildPieCards(selectedPies);
   };
 };
-
-const buttonEvents = () => {
-  document.getElementById('Zoe').addEventListener('click', buttonClick);
-  document.getElementById('Saul').addEventListener('click', buttonClick);
-  document.getElementById('Michael').addEventListener('click', buttonClick);
-  document.getElementById('All').addEventListener('click', buttonClick);
-}
 
 const init = () => {
   buttonEvents();
