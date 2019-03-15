@@ -19,7 +19,7 @@ $npm install -g http-server
 ```
 
 ## Running
-Browse to pie directory and run Http Server by typing the following command into the terminal:
+Browse to pie directory and run HTTP Server by typing the following command into the terminal:
 ```
 $ hs -p 5000
 ```
