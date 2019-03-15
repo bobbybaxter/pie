@@ -60,15 +60,6 @@ const printToDom = (divId, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 }
 
-// const buildPieCards = () => {
-//   let domString = '';
-//   for (var i = 0; i < pies.length; i++) {
-//     domString += `${pies[i].name} </br>`;
-//   };
-//   printToDom('div1', domString);
-// }
-
-
 const buildPieCards = (monkeybutts) => {
   let domString = '';
   monkeybutts.forEach((pie) => {
@@ -78,6 +69,21 @@ const buildPieCards = (monkeybutts) => {
     domString += `</div>`;
   });
   printToDom('div1', domString);
+}
+
+// const buildPieCards = () => {
+//   let domString = '';
+//   for (var i = 0; i < pies.length; i++) {
+//     domString += `${pies[i].name} </br>`;
+//   };
+//   printToDom('div1', domString);
+// }
+
+const buttonEvents = () => {
+  document.getElementById('Zoe').addEventListener('click', buttonClick);
+  document.getElementById('Saul').addEventListener('click', buttonClick);
+  document.getElementById('Michael').addEventListener('click', buttonClick);
+  document.getElementById('All').addEventListener('click', buttonClick);
 }
 
 const buttonClick = (e) => {
@@ -97,13 +103,6 @@ const buttonClick = (e) => {
     buildPieCards(selectedPies);
   };
 };
-
-const buttonEvents = () => {
-  document.getElementById('Zoe').addEventListener('click', buttonClick);
-  document.getElementById('Saul').addEventListener('click', buttonClick);
-  document.getElementById('Michael').addEventListener('click', buttonClick);
-  document.getElementById('All').addEventListener('click', buttonClick);
-}
 
 const init = () => {
   buttonEvents();

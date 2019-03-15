@@ -1,69 +1,29 @@
 # Pie
-Makes an array of pies
+One-page locally hosted site to practice arrays and buttons in Javascript.
+
+Using a loop in Javascript, I've created cards for the pies within the array.  When clicked, the buttons will only display the cards of the pies with the corresponding "instructor", which is assigned to each pie object.
 
 ## Screenshots
 ![image of pies website](https://raw.githubusercontent.com/bobbybaxter/pie/master/img/pie-screenshot.png)
 
 ## Getting Started
+Clone the repo:
 ```
 $git clone https://github.com/bobbybaxter/pie
 ```
 
 ### Prerequisites
+Download HTTP Server, to be able to serve the site locally in your browser:
 ```
 $npm install -g http-server
 ```
 
 ## Running
-Browse to pie director and run http server
-
-<!-- ## Headings
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-## Text
-Text is just type into the document.  Two spaces at the end of a line create a new one. 
-
-Like this.
-
-## Lists
-#### Ordered
-1. Item #1
-2. Item #2
-3. Item #3
-
-#### Unordered
-- Item #1
-- Item #2
-- Item #3
-  - item #4
-  - item #5
-
-## Links
-[Text](https://google.com)
-
-[Link with Title](https://ww.google.com "Google's Homepage")
-
-## Images
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference=style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-## Syntax Highlighting
-```javascript
-let text = "javascript"
-alert(text);
+Browse to pie directory and run Http Server by typing the following command into the terminal:
+```
+$ hs -p 5000
 ```
 
-## Checkboxes
-- [ ] Item #1
-- [ ] Item #2
-- [x] Item #3 -->
+In your web browser, copy and paste this:
+
+ `localhost:5000`
